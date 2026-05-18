@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-05-18T15:47:11 IST" name="Default suite" finished-at="2026-05-18T15:48:47 IST" duration-ms="96050">
+    <groups>
+    </groups>
+    <test started-at="2026-05-18T15:47:11 IST" name="Default test" finished-at="2026-05-18T15:48:47 IST" duration-ms="96050">
+      <class name="onboardingTest.MySelfOnboardingTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:onboardingTest.MySelfOnboardingTest@6f03482]" started-at="2026-05-18T15:47:11 IST" name="setup" finished-at="2026-05-18T15:47:17 IST" duration-ms="6440" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="onboardingFlow()[pri:0, instance:onboardingTest.MySelfOnboardingTest@6f03482]" started-at="2026-05-18T15:47:17 IST" name="onboardingFlow" finished-at="2026-05-18T15:48:47 IST" duration-ms="89559" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onboardingFlow -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:onboardingTest.MySelfOnboardingTest@6f03482]" started-at="2026-05-18T15:48:47 IST" name="tearDown" finished-at="2026-05-18T15:48:47 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- onboardingTest.MySelfOnboardingTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
