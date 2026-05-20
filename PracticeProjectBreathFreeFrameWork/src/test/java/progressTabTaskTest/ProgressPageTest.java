@@ -7,57 +7,56 @@ import pageObjects.ProgressPage;
 
 public class ProgressPageTest extends BaseClass {
 
-		@Test
-		public void progressTaskTest() throws Exception {
+	@Test
+	public void progressTaskTest() throws Exception {
 
-			ProgressPage progress =
-					new ProgressPage(driver);
+		ProgressPage progress = new ProgressPage(driver);
 
-			// =========================
-			// OPEN PROGRESS TAB
-			// =========================
+		// =========================
+		// OPEN PROGRESS TAB
+		// =========================
 
-			progress.openProgressTab();
+		progress.openProgressTab();
 
-			Thread.sleep(3000);
+		Thread.sleep(3000);
 
-			// =========================
-			// MORNING TAB
-			// =========================
+		// =========================
+		// MORNING TAB
+		// =========================
 
-			progress.handleMorningTab();
+		progress.handleMorningTab();
 
-			Thread.sleep(2000);
+		Thread.sleep(2000);
 
-			// =========================
-			// PFR POPUP
-			// =========================
+		// =========================
+		// PFR POPUP
+		// =========================
 
-			progress.handlePFRPopup();
+		progress.handlePFRPopup();
 
-			Thread.sleep(3000);
+		Thread.sleep(3000);
 
-			// =========================
-			// SUPPORT FLOW
-			// =========================
+		// =========================
+		// SUPPORT FLOW
+		// =========================
 
-			progress.clickSupportCTA();
+		progress.clickSupportCTA();
 
-			Thread.sleep(2000);
+		Thread.sleep(2000);
 
-			progress.clickDoctorsCard();
+		progress.clickDoctorsCard();
 
-			Thread.sleep(3000);
+		Thread.sleep(3000);
 
-			progress.enterPincode("410013");
+		progress.enterPincode("410013");
 
-			Thread.sleep(2000);
+		Thread.sleep(2000);
 
-			progress.clickSearchButton();
+		progress.clickSearchButton();
 
-			Thread.sleep(5000);
+		Thread.sleep(5000);
 
-			progress.navigateBackToProgressPage();
-		}
-	
+		progress.navigateBackToProgressPage();
+	}
+
 }
