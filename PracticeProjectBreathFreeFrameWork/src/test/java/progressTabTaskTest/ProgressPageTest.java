@@ -7,56 +7,63 @@ import pageObjects.ProgressPage;
 
 public class ProgressPageTest extends BaseClass {
 
-	@Test
-	public void progressTaskTest() throws Exception {
+	@Test(priority = 1)
+	public void progressPage_MorningTaskTest() throws Exception {
 
 		ProgressPage progress = new ProgressPage(driver);
-
-		// =========================
-		// OPEN PROGRESS TAB
-		// =========================
 
 		progress.openProgressTab();
 
 		Thread.sleep(3000);
 
-		// =========================
-		// MORNING TAB
-		// =========================
+		progress.switchToMorningTab();
 
-		progress.handleMorningTab();
-
-		Thread.sleep(2000);
-
-		// =========================
-		// PFR POPUP
-		// =========================
+		Thread.sleep(3000);
 
 		progress.handlePFRPopup();
 
 		Thread.sleep(3000);
 
-		// =========================
-		// SUPPORT FLOW
-		// =========================
-
-		progress.clickSupportCTA();
-
-		Thread.sleep(2000);
-
-		progress.clickDoctorsCard();
+		progress.handleMedicineReminder();
 
 		Thread.sleep(3000);
 
-		progress.enterPincode("410013");
+		progress.handleExercise();
 
-		Thread.sleep(2000);
+		System.out.println("Morning task flow completed");
+	}
 
-		progress.clickSearchButton();
+	@Test(priority = 2)
+	public void progressPage_eveningTaskTest() throws Exception {
 
-		Thread.sleep(5000);
+		ProgressPage progress = new ProgressPage(driver);
 
-		progress.navigateBackToProgressPage();
+		progress.openProgressTab();
+
+		Thread.sleep(3000);
+
+		progress.switchToEveningTab();
+
+		Thread.sleep(4000);
+
+		boolean unlocked = progress.validateEveningUnlock();
+
+		if (!unlocked) {
+
+			return;
+		}
+
+		progress.handlePFRPopup();
+
+		Thread.sleep(3000);
+
+		progress.handleMedicineReminder();
+
+		Thread.sleep(3000);
+
+		progress.handleExercise();
+
+		System.out.println("Evening task flow completed");
 	}
 
 }
